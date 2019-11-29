@@ -12,11 +12,11 @@ export class ExternalChooser {
   /**
    *
    * @param {ActionDispatcher<ChangePropertyValue,ChangePropertyValueBuilder>} changePropertyValueActionDispatcher
-   * @param {ActionDispatcher<OpenExternalHandler,OpenExternalHandlerBuilder>} openExternalHandlerActionDispatcher
+   * @param {ActionDispatcher<OpenExternalChooser,OpenExternalChooserBuilder>} openExternalChooserActionDispatcher
    * @param {ComponentAtmosphereLayersPublicHandler} layersHandler
    * @return {string}
    */
-  register(changePropertyValueActionDispatcher, openExternalHandlerActionDispatcher, layersHandler) {
+  register(changePropertyValueActionDispatcher, openExternalChooserActionDispatcher, layersHandler) {
     throw new Error('should be override')
   }
 
