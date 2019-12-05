@@ -1,7 +1,7 @@
 /**
  * @interface
  */
-export class ExternalChooser {
+export class ExternalRender {
   /**
    * @return {string}
    */
@@ -12,7 +12,7 @@ export class ExternalChooser {
   /**
    *
    * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcher
-   * @param {ActionDispatcher<OpenExternalHandler, OpenExternalHandlerBuilder>} openExternalChooserActionDispatcher
+   * @param {ActionDispatcher<OpenExternalHandler, OpenExternalHandlerBuilder>} openExternalRenderActionDispatcher
    * @param {ComponentAtmosphereLayersPublicHandler} layersHandler
    * @return {string}
    */

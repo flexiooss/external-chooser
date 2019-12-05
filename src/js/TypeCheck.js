@@ -2,6 +2,8 @@ import {ExternalChooser} from './ExternalChooser'
 import {assertType} from '@flexio-oss/assert'
 import {ExternalChooserMap} from './ExternalChooserMap'
 import {globalFlexioImport} from '@flexio-oss/global-import-registry'
+import {ExternalRenderMap} from './ExternalRenderMap'
+import {ExternalRender} from './ExternalRender'
 
 
 export class TypeCheck {
@@ -34,6 +36,33 @@ export class TypeCheck {
 
   /**
    *
+   * @param {ExternalRender} inst
+   * @return {boolean}
+   */
+  static isExternalRender(inst) {
+    return inst instanceof ExternalRender
+  }
+
+  /**
+   *
+   * @param {ExternalRender} inst
+   * @throws {TypeError}
+   */
+  static assertIsExternalRender(inst) {
+    assertType(TypeCheck.isExternalRender(inst), '`inst` should be ExternalRender')
+  }
+
+  /**
+   *
+   * @param {ExternalRenderMap} inst
+   * @return {boolean}
+   */
+  static isExternalRenderMap(inst) {
+    return inst instanceof ExternalRenderMap
+  }
+
+  /**
+   *
    * @param {ExternalChooserMap} inst
    * @throws {TypeError}
    */
@@ -43,19 +72,19 @@ export class TypeCheck {
 
   /**
    *
-   * @param {OpenExternalChooser} inst
+   * @param {OpenExternalHandler} inst
    * @return {boolean}
    */
-  static isOpenExternalChooser(inst) {
-    return inst instanceof globalFlexioImport.io.flexio.external_chooser.actions.OpenExternalChooser
+  static isOpenExternalHandler(inst) {
+    return inst instanceof globalFlexioImport.io.flexio.resource_external_handler.actions.OpenExternalHandler
   }
 
   /**
    *
-   * @param {OpenExternalChooser} inst
+   * @param {OpenExternalHandler} inst
    * @throws {TypeError}
    */
   static assertIsOpenExternalChooser(inst) {
-    assertType(TypeCheck.isOpenExternalChooser(inst), '`inst` should be OpenExternalChooser')
+    assertType(TypeCheck.isOpenExternalHandler(inst), '`inst` should be OpenExternalHandler')
   }
 }

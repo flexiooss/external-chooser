@@ -1,8 +1,8 @@
 {
-  "name": "@flexio-oss/external-chooser",
+  "name": "@flexio-oss/resource-external-handler",
   "version": "1.0.0-dev",
   "main": "index.js",
-  "repository": "git@github.com:flexiooss/external-chooser.git",
+  "repository": "git@github.com:flexiooss/resource-external-handler.git",
   "author": "Thomas Chatelain (https://github.com/TomAchT)",
   "devDependencies": {
     "code-altimeter-js": "https://github.com/flexiooss/code-altimeter-js.git",
@@ -12,6 +12,7 @@
     "@flexio-corp/hotballoon-common-parent": "0.0.0-dev"
   },
   "peerDependencies": {
+    "@flexio-corp/js-flexio-resources-common": ">0.0.0",
     "@flexio-oss/assert": ">0.0.0",
     "@flexio-oss/hotballoon": ">0.0.0",
     "@flexio-oss/flex-types": ">0.0.0",
