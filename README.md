@@ -1,1 +1,1 @@
-# external-chooser
+# resource-external-handler
