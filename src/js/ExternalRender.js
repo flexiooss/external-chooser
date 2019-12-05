@@ -12,19 +12,64 @@ export class ExternalRender {
   /**
    *
    * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcher
-   * @param {ActionDispatcher<OpenExternalHandler, OpenExternalHandlerBuilder>} openExternalRenderActionDispatcher
    * @param {ComponentAtmosphereLayersPublicHandler} layersHandler
+   * @return {ExternalRenderPublic}
+   */
+  register(changePropertyValueActionDispatcher, layersHandler) {
+    throw new Error('should be override')
+  }
+
+}
+
+
+/**
+ * @interface
+ */
+export class ExternalRenderPublic {
+  /**
    * @return {string}
    */
-  register(changePropertyValueActionDispatcher, openExternalChooserActionDispatcher, layersHandler) {
+  ID() {
+    throw new Error('should be override')
+  }
+
+  /**
+   * @return {string}
+   */
+  handlerName() {
     throw new Error('should be override')
   }
 
   /**
    *
-   * @param {string} token
+   * @param {OpenExternalHandler} openExternalHandler
+   * @param {Element} parentElement
+   * @return {ExternalRenderInstancePublic}
    */
-  remove(token) {
+  buildInstanceInto(openExternalHandler, parentElement) {
     throw new Error('should be override')
   }
+
+  remove() {
+    throw new Error('should be override')
+  }
+
+}
+
+
+/**
+ * @interface
+ */
+export class ExternalRenderInstancePublic {
+  /**
+   * @return {string}
+   */
+  ID() {
+    throw new Error('should be override')
+  }
+
+  remove() {
+    throw new Error('should be override')
+  }
+
 }

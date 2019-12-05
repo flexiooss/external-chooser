@@ -14,17 +14,34 @@ export class ExternalChooser {
    * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcher
    * @param {ActionDispatcher<OpenExternalHandler, OpenExternalHandlerBuilder>} openExternalChooserActionDispatcher
    * @param {ComponentAtmosphereLayersPublicHandler} layersHandler
-   * @return {string}
+   * @return {ExternalChooserPublic}
    */
   register(changePropertyValueActionDispatcher, openExternalChooserActionDispatcher, layersHandler) {
     throw new Error('should be override')
   }
 
+}
+
+
+/**
+ * @interface
+ */
+export class ExternalChooserPublic {
   /**
-   *
-   * @param {string} token
+   * @return {string}
    */
-  remove(token) {
+  ID() {
+    throw new Error('should be override')
+  }
+
+  /**
+   * @return {string}
+   */
+  handlerName() {
+    throw new Error('should be override')
+  }
+
+  remove() {
     throw new Error('should be override')
   }
 }

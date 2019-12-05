@@ -1,9 +1,9 @@
-import {ExternalChooser} from './ExternalChooser'
+import {ExternalChooser, ExternalChooserPublic} from './ExternalChooser'
 import {assertType} from '@flexio-oss/assert'
-import {ExternalChooserMap} from './ExternalChooserMap'
+import {ExternalChooserPublicMap} from './ExternalChooserPublicMap'
 import {globalFlexioImport} from '@flexio-oss/global-import-registry'
-import {ExternalRenderMap} from './ExternalRenderMap'
-import {ExternalRender} from './ExternalRender'
+import {ExternalRenderPublicMap} from './ExternalRenderPublicMap'
+import {ExternalRender, ExternalRenderInstancePublic, ExternalRenderPublic} from './ExternalRender'
 
 
 export class TypeCheck {
@@ -18,6 +18,15 @@ export class TypeCheck {
 
   /**
    *
+   * @param {ExternalChooserPublic} inst
+   * @return {boolean}
+   */
+  static isExternalChooserPublic(inst) {
+    return inst instanceof ExternalChooserPublic
+  }
+
+  /**
+   *
    * @param {ExternalChooser} inst
    * @throws {TypeError}
    */
@@ -27,11 +36,11 @@ export class TypeCheck {
 
   /**
    *
-   * @param {ExternalChooserMap} inst
+   * @param {ExternalChooserPublicMap} inst
    * @return {boolean}
    */
-  static isExternalChooserMap(inst) {
-    return inst instanceof ExternalChooserMap
+  static isExternalChooserPublicMap(inst) {
+    return inst instanceof ExternalChooserPublicMap
   }
 
   /**
@@ -45,6 +54,24 @@ export class TypeCheck {
 
   /**
    *
+   * @param {ExternalRenderPublic} inst
+   * @return {boolean}
+   */
+  static isExternalRenderPublic(inst) {
+    return inst instanceof ExternalRenderPublic
+  }
+
+  /**
+   *
+   * @param {ExternalRenderInstancePublic} inst
+   * @return {boolean}
+   */
+  static isExternalRenderInstancePublic(inst) {
+    return inst instanceof ExternalRenderInstancePublic
+  }
+
+  /**
+   *
    * @param {ExternalRender} inst
    * @throws {TypeError}
    */
@@ -54,20 +81,29 @@ export class TypeCheck {
 
   /**
    *
-   * @param {ExternalRenderMap} inst
+   * @param {ExternalRenderPublicMap} inst
    * @return {boolean}
    */
-  static isExternalRenderMap(inst) {
-    return inst instanceof ExternalRenderMap
+  static isExternalRenderPublicMap(inst) {
+    return inst instanceof ExternalRenderPublicMap
   }
 
   /**
    *
-   * @param {ExternalChooserMap} inst
+   * @param {ExternalChooserPublicMap} inst
    * @throws {TypeError}
    */
   static assertIsExternalChooserMap(inst) {
-    assertType(TypeCheck.isExternalChooserMap(inst), '`inst` should be ExternalChooserMap')
+    assertType(TypeCheck.isExternalChooserPublicMap(inst), '`inst` should be ExternalChooserPublicMap')
+  }
+
+  /**
+   *
+   * @param {ExternalChooserPublicMap} inst
+   * @throws {TypeError}
+   */
+  static assertIsExternalRenderMap(inst) {
+    assertType(TypeCheck.isExternalRenderPublicMap(inst), '`inst` should be ExternalRenderPublicMap')
   }
 
   /**
