@@ -4,9 +4,16 @@ import {ExternalChooserPublic} from './ExternalChooser'
 
 
 /**
- * @type FlexMap<ExternalChooserPublic>
+ * @extends FlexMap.<ExternalChooserPublic>
+ * @type FlexMap.<ExternalChooserPublic>
  */
 export class ExternalChooserPublicMap extends FlexMap {
+  /**
+   *
+   * @param {ExternalChooserPublic} v
+   * @private
+   * @override
+   */
   _validate(v) {
     assertType(
       v instanceof ExternalChooserPublic,
