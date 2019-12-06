@@ -11,11 +11,10 @@ export class ExternalRender {
 
   /**
    *
-   * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcher
-   * @param {ComponentAtmosphereLayersPublicHandler} layersHandler
+   * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcherSubscriber
    * @return {ExternalRenderPublic}
    */
-  register(changePropertyValueActionDispatcher, layersHandler) {
+  register(changePropertyValueActionDispatcherSubscriber) {
     throw new Error('should be override')
   }
 
@@ -46,7 +45,7 @@ export class ExternalRenderPublic {
    * @param {Element} parentElement
    * @return {ExternalRenderInstancePublic}
    */
-  buildInstanceInto(openExternalHandler, parentElement) {
+  renderInto(openExternalHandler, parentElement) {
     throw new Error('should be override')
   }
 
