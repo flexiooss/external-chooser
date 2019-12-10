@@ -12,7 +12,7 @@ export class ExternalChooser {
   /**
    *
    * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcher
-   * @param {ActionDispatcher<OpenExternalHandler, OpenExternalHandlerBuilder>} openExternalChooserActionDispatcher
+   * @param {ActionDispatcher<OpenExternalChooser, OpenExternalChooserBuilder>} openExternalChooserActionDispatcher
    * @param {ComponentAtmosphereLayersPublicHandler} layersHandler
    * @return {ExternalChooserPublic}
    */

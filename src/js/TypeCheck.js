@@ -108,19 +108,37 @@ export class TypeCheck {
 
   /**
    *
-   * @param {OpenExternalHandler} inst
+   * @param {OpenExternalChooser} inst
    * @return {boolean}
    */
-  static isOpenExternalHandler(inst) {
-    return inst instanceof globalFlexioImport.io.flexio.resource_external_handler.actions.OpenExternalHandler
+  static isOpenExternalChooser(inst) {
+    return inst instanceof globalFlexioImport.io.flexio.resource_external_handler.actions.OpenExternalChooser
   }
 
   /**
    *
-   * @param {OpenExternalHandler} inst
+   * @param {OpenExternalChooser} inst
    * @throws {TypeError}
    */
   static assertIsOpenExternalChooser(inst) {
-    assertType(TypeCheck.isOpenExternalHandler(inst), '`inst` should be OpenExternalHandler')
+    assertType(TypeCheck.isOpenExternalChooser(inst), '`inst` should be OpenExternalChooser')
+  }
+
+  /**
+   *
+   * @param {UpdateExternalRender} inst
+   * @return {boolean}
+   */
+  static isUpdateExternalRender(inst) {
+    return inst instanceof globalFlexioImport.io.flexio.resource_external_handler.actions.UpdateExternalRender
+  }
+
+  /**
+   *
+   * @param {UpdateExternalRender} inst
+   * @throws {TypeError}
+   */
+  static assertIsUpdateExternalRender(inst) {
+    assertType(TypeCheck.isUpdateExternalRender(inst), '`inst` should be UpdateExternalRender')
   }
 }
