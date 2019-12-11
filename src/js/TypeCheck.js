@@ -2,8 +2,6 @@ import {ExternalChooser, ExternalChooserPublic} from './ExternalChooser'
 import {assertType} from '@flexio-oss/assert'
 import {ExternalChooserPublicMap} from './ExternalChooserPublicMap'
 import {globalFlexioImport} from '@flexio-oss/global-import-registry'
-import {ExternalRenderPublicMap} from './ExternalRenderPublicMap'
-import {ExternalRender, ExternalRenderInstancePublic, ExternalRenderPublic} from './ExternalRender'
 
 
 export class TypeCheck {
@@ -45,69 +43,6 @@ export class TypeCheck {
 
   /**
    *
-   * @param {ExternalRender} inst
-   * @return {boolean}
-   */
-  static isExternalRender(inst) {
-    return inst instanceof ExternalRender
-  }
-
-  /**
-   *
-   * @param {ExternalRenderPublic} inst
-   * @return {boolean}
-   */
-  static isExternalRenderPublic(inst) {
-    return inst instanceof ExternalRenderPublic
-  }
-
-  /**
-   *
-   * @param {ExternalRenderInstancePublic} inst
-   * @return {boolean}
-   */
-  static isExternalRenderInstancePublic(inst) {
-    return inst instanceof ExternalRenderInstancePublic
-  }
-
-  /**
-   *
-   * @param {ExternalRender} inst
-   * @throws {TypeError}
-   */
-  static assertIsExternalRender(inst) {
-    assertType(TypeCheck.isExternalRender(inst), '`inst` should be ExternalRender')
-  }
-
-  /**
-   *
-   * @param {ExternalRenderPublicMap} inst
-   * @return {boolean}
-   */
-  static isExternalRenderPublicMap(inst) {
-    return inst instanceof ExternalRenderPublicMap
-  }
-
-  /**
-   *
-   * @param {ExternalChooserPublicMap} inst
-   * @throws {TypeError}
-   */
-  static assertIsExternalChooserMap(inst) {
-    assertType(TypeCheck.isExternalChooserPublicMap(inst), '`inst` should be ExternalChooserPublicMap')
-  }
-
-  /**
-   *
-   * @param {ExternalChooserPublicMap} inst
-   * @throws {TypeError}
-   */
-  static assertIsExternalRenderMap(inst) {
-    assertType(TypeCheck.isExternalRenderPublicMap(inst), '`inst` should be ExternalRenderPublicMap')
-  }
-
-  /**
-   *
    * @param {OpenExternalChooser} inst
    * @return {boolean}
    */
@@ -124,21 +59,4 @@ export class TypeCheck {
     assertType(TypeCheck.isOpenExternalChooser(inst), '`inst` should be OpenExternalChooser')
   }
 
-  /**
-   *
-   * @param {UpdateExternalRender} inst
-   * @return {boolean}
-   */
-  static isUpdateExternalRender(inst) {
-    return inst instanceof globalFlexioImport.io.flexio.resource_external_handler.actions.UpdateExternalRender
-  }
-
-  /**
-   *
-   * @param {UpdateExternalRender} inst
-   * @throws {TypeError}
-   */
-  static assertIsUpdateExternalRender(inst) {
-    assertType(TypeCheck.isUpdateExternalRender(inst), '`inst` should be UpdateExternalRender')
-  }
 }
