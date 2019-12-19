@@ -14,9 +14,10 @@ export class ExternalChooser {
    * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcher
    * @param {ActionDispatcher<OpenExternalChooser, OpenExternalChooserBuilder>} openExternalChooserActionDispatcher
    * @param {ComponentAtmosphereLayersPublicHandler} layersHandler
+   * @param {ComponentKeyboardShortCutPublic} keyboardShortCutComponent
    * @return {ExternalChooserPublic}
    */
-  register(changePropertyValueActionDispatcher, openExternalChooserActionDispatcher, layersHandler) {
+  register(changePropertyValueActionDispatcher, openExternalChooserActionDispatcher, layersHandler, keyboardShortCutComponent) {
     throw new Error('should be override')
   }
 
