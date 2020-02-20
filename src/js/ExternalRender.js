@@ -38,7 +38,16 @@ export class ExternalRenderPublic {
    * @param {PropertyValue} propertyValue
    * @return {Element}
    */
-  elementFor(propertyValue) {
+  editableElementFor(propertyValue) {
+    throw new Error('should be override')
+  }
+
+  /**
+   *
+   * @param {PropertyValue} propertyValue
+   * @return {Element}
+   */
+  readableElementFor(propertyValue) {
     throw new Error('should be override')
   }
 
