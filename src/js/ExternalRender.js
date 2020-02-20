@@ -11,11 +11,9 @@ export class ExternalRender {
 
   /**
    *
-   * @param {ActionDispatcher<PropertyValue, PropertyValueBuilder>} changePropertyValueActionDispatcher
-   * @param {ComponentKeyboardShortCutPublic} keyboardShortCutComponent
    * @return {ExternalRenderPublic}
    */
-  register(changePropertyValueActionDispatcher, keyboardShortCutComponent) {
+  register() {
     throw new Error('should be override')
   }
 
@@ -35,19 +33,19 @@ export class ExternalRenderPublic {
 
   /**
    *
-   * @param {PropertyValue} propertyValue
+   * @param {View, ExternalChooserOpenableFieldInterface , FormFieldEditableInterface ,FormFieldInterface} view
    * @return {Element}
    */
-  editableElementFor(propertyValue) {
+  editableElementFor(view) {
     throw new Error('should be override')
   }
 
   /**
    *
-   * @param {PropertyValue} propertyValue
+   * @param {View, ExternalChooserOpenableFieldInterface , FormFieldEditableInterface ,FormFieldInterface} view
    * @return {Element}
    */
-  readableElementFor(propertyValue) {
+  readableElementFor(view) {
     throw new Error('should be override')
   }
 
