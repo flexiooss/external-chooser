@@ -1,6 +1,6 @@
 import {FlexMap} from '@flexio-oss/flex-types'
 import {assertType} from '@flexio-oss/assert'
-import {ExternalRenderPublic} from './ExternalRenderPublic'
+import {ExternalRenderPublic} from './ExternalRender'
 
 
 /**
