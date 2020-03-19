@@ -9,16 +9,14 @@
     "@flexio-oss/hotballoon-test-dummies": "1.0.0-dev"
   },
   "dependencies": {
-    "@flexio-corp/hotballoon-common-parent": "0.2.0-dev"
+    "@flexio-corp/js-hotballoon-parent": "0.3.0-dev"
   },
   "peerDependencies": {
-    "@flexio-corp/js-flexio-resources-common": ">0.0.0",
     "@flexio-oss/assert": ">0.0.0",
     "@flexio-oss/hotballoon": ">0.0.0",
     "@flexio-oss/flex-types": ">0.0.0",
     "@flexio-oss/global-import-registry": ">0.0.0",
-    "@flexio-oss/js-generator-helpers": ">0.0.0",
-    "@flexio-oss/js-style-theme-interface": ">0.0.0"
+    "@flexio-oss/js-generator-helpers": ">0.0.0"
   },
   "hotballoon-shed": {
     "build": {
